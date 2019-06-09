@@ -16,14 +16,14 @@ namespace ZoomIt
             group = helper.AddGroup(Name);
 
             selectedValue = ModConfig.Instance.MinDistance;
-            group.AddSlider("Minimum Distance", 10f, 40f, 5f, selectedValue, sel =>
+            group.AddSlider("Minimum Distance", 0f, 40f, 5f, selectedValue, sel =>
             {
                 ModConfig.Instance.MinDistance = sel;
                 ModConfig.Instance.Save();
             });
 
             selectedValue = ModConfig.Instance.MaxDistance;
-            group.AddSlider("Maximum Distance", 3000f, 21000f, 3000f, selectedValue, sel =>
+            group.AddSlider("Maximum Distance", 3000f, 27000f, 3000f, selectedValue, sel =>
             {
                 ModConfig.Instance.MaxDistance = sel;
                 ModConfig.Instance.Save();

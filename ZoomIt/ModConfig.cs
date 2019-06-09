@@ -4,8 +4,8 @@
     public class ModConfig
     {
         public bool ConfigUpdated { get; set; }
-        public float MinDistance { get; set; } = 25f;
-        public float MaxDistance { get; set; } = 12000f;
+        public float MinDistance { get; set; } = 20f;
+        public float MaxDistance { get; set; } = 15000f;
         public bool IgnoreBorders { get; set; } = true;
 
         private static ModConfig instance;
