@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace ZoomIt
 {
-    public class ZoomManager : MonoBehaviour
+    public class ModManager : MonoBehaviour
     {
         private bool _initialized;
 
-        private void Update()
+        public void Update()
         {
             try
             {
@@ -21,7 +21,7 @@ namespace ZoomIt
             }
             catch (Exception e)
             {
-                Debug.Log("[Zoom It!] ZoomManager:Update -> Exception: " + e.Message);
+                Debug.Log("[Zoom It!] ModManager:Update -> Exception: " + e.Message);
             }
         }
 
@@ -29,7 +29,7 @@ namespace ZoomIt
         {
             try
             {
-                CameraController cameraController = Camera.main.GetComponent<CameraController>();
+                CameraController cameraController = GameObject.FindObjectOfType<CameraController>();
 
                 if (cameraController != null)
                 {
@@ -40,7 +40,7 @@ namespace ZoomIt
             }
             catch (Exception e)
             {
-                Debug.Log("[Zoom It!] ZoomManager:UpdateZoom -> Exception: " + e.Message);
+                Debug.Log("[Zoom It!] ModManager:UpdateZoom -> Exception: " + e.Message);
             }
         }
     }

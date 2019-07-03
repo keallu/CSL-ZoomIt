@@ -8,14 +8,14 @@ namespace ZoomIt
 
     public class Loading : LoadingExtensionBase
     {
-        private GameObject _zoomManagerGameObject;
+        private GameObject _modManagerGameObject;
 
         public override void OnLevelLoaded(LoadMode mode)
         {
             try
             {
-                _zoomManagerGameObject = new GameObject("ZoomItZoomManager");
-                _zoomManagerGameObject.AddComponent<ZoomManager>();
+                _modManagerGameObject = new GameObject("ZoomItModManager");
+                _modManagerGameObject.AddComponent<ModManager>();
             }
             catch (Exception e)
             {
@@ -27,9 +27,9 @@ namespace ZoomIt
         {
             try
             {
-                if (_zoomManagerGameObject != null)
+                if (_modManagerGameObject != null)
                 {
-                    UnityEngine.Object.Destroy(_zoomManagerGameObject);
+                    UnityEngine.Object.Destroy(_modManagerGameObject);
                 }
             }
             catch (Exception e)
