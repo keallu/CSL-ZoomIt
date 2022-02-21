@@ -6,6 +6,12 @@ namespace ZoomIt
     public class ModManager : MonoBehaviour
     {
         private bool _initialized;
+        private CameraController cameraController = null;
+
+        public void Awake()
+        {
+            cameraController = GameObject.FindObjectOfType<CameraController>();
+        }
 
         public void Update()
         {
@@ -29,8 +35,6 @@ namespace ZoomIt
         {
             try
             {
-                CameraController cameraController = GameObject.FindObjectOfType<CameraController>();
-
                 if (cameraController != null)
                 {
                     cameraController.m_minDistance = ModConfig.Instance.MinDistance;
